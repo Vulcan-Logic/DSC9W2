@@ -1,0 +1,22 @@
+---
+title: "R Markdown and leaflet example"
+author: "Vineet W. Singh"
+date: "24 April 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# GET YOUR TEETH FIXED
+
+## VISIT MONA VALE FAMILY DENTAL 
+
+```{r chunk1}
+library(leaflet)
+my_map<-leaflet() %>% addTiles() %>% 
+  addMarkers(lat=-33.677615,lng=151.303520,
+            popup="Mona Vale Family Dental")
+my_map
+```
